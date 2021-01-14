@@ -1,0 +1,9 @@
+version: '3.2'
+
+services:
+  api: 
+    build: './api'
+    expose:
+      - "5000"
+  web_scraper:
+    build: './web_scraper'
