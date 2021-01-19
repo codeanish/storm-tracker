@@ -5,5 +5,13 @@ services:
     build: './api'
     expose:
       - "5000"
+  db:
+    image: postgres
+    environment: 
+      POSTGRES_PASSWORD: test
+  db_admin:
+    image: adminer
+    ports:
+      - 8080:8080
   web_scraper:
     build: './web_scraper'
